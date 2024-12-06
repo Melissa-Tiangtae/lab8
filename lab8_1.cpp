@@ -6,12 +6,30 @@ int main()
   char rank;
   cout << "Input your rank: ";
   cin >> rank;
-  switch(rank){
-    case 'S': cout << "You have received Super Ultra Rare Unit!!!\n";
-    case 'A': cout << "You have received 5 gems.\n";
-    case 'B': cout << "You have received 1 gems.\n";
-    case 'C': cout << "You have received 2000 coins.\n";
-    case 'D': cout << "You have received very KAK items.\n";
+
+  int start = 0;
+
+  if(rank == 'S'){
+    cout << "You have received Super Ultra Rare Unit!!!\n";
+    start = 1;
   }
+    if(rank == 'A' || start == 1){
+       cout << "You have received 5 gems.\n"; 
+       start = 1;
+    }
+        
+    if(rank == 'B' || start == 1){
+      cout << "You have received 1 gems.\n"; start = 1;
+
+    }
+    if(rank == 'C'|| start == 1){
+      cout << "You have received 2000 coins.\n"; start = 1;
+
+    }
+              
+    if(rank == 'D'|| start == 1){
+      cout << "You have received very KAK items.\n";
+    }
+              
   return 0;
 }
